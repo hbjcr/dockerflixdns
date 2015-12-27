@@ -6,23 +6,23 @@ Dockerflix's complementary DNS service implementation thru dnsmasq
 ## Usage
 
 Create a docker image:
-`docker build -t hbjcr/dockerflixdns .`
+```docker build -t hbjcr/dockerflixdns .```
 
 Create a new DockerflixDNS container:
-`docker run -d -p 53:53/udp hbjcr/dockerflixdns`
+```docker run -d -p 53:53/udp hbjcr/dockerflixdns```
 
-Modify your dnsmasq.conf file to include the domain entries required by Dockerflix:
-`Instructions`
+Find the location of your configuration file:
+```docker inspect <containerID>```
+
+Modify your dnsmasq.conf file to include the domain entries required by Dockerflix (read the instructions on how to use gendns-conf.py first):
+```vim /var/lib/docker/volumes/.../_data/dnsmasq.conf```
 
 Restart your DockerflixDNS container:
-`Instructions`
-
-Modify your init routine to start your container after rebooting:
-`Instuctions`
+```docker restart <containerID>```
 
 ## Test
 
 Run the following command from your host server:
-`dig @localhost amazon.com`
+```dig @localhost amazon.com```
 
 The IP number you added to your dnsmasq.conf file should be listed
