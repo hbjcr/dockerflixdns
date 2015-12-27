@@ -3,10 +3,12 @@ Dockerflix's complementary DNS service implementation thru dnsmasq
 
 [Dockerflix](https://github.com/trick77/dockerflix) requires a DNS spoofing service to work, this is a docker implementation of such DNS service so people can use services outside the US simply by modifying their DNS address.
 
+An official docker image can be found here: https://hub.docker.com/r/hbjcr/dockerflixdns/
+
 ## Usage
 
 Create a docker image:
-```docker build -t hbjcr/dockerflixdns .```
+```docker pull hbjcr/dockerflixdns```
 
 Create a new DockerflixDNS container:
 ```docker run -d -p 53:53/udp hbjcr/dockerflixdns```
