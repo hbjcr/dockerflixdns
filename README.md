@@ -1,5 +1,6 @@
 # DockerflixDNS
 [![](https://badge.imagelayers.io/hbjcr/dockerflixdns:latest.svg)](https://imagelayers.io/?images=hbjcr/dockerflixdns:latest 'Get your own badge on imagelayers.io')
+[![ghit.me](https://ghit.me/badge.svg?repo=hbjcr/dockerflixdns)](https://ghit.me/repo/hbjcr/dockerflixdns)
 
 Dockerflix's complementary DNS service implementation thru dnsmasq
 
